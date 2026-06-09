@@ -361,7 +361,7 @@ export default function HorrorWriterLanding() {
           <div className="flex justify-center">
             <div className="author-photo flex items-center justify-center">
               <span className="text-zinc-500 uppercase tracking-[0.3em] text-xs">
-                Fotografía del autor
+                Fotografía
               </span>
             </div>
           </div>
@@ -458,7 +458,7 @@ export default function HorrorWriterLanding() {
           </span>
 
           <h3 className="font-title text-6xl md:text-7xl mt-6 mb-8">
-            La Percepción
+            No Sense
           </h3>
 
           <p className="max-w-3xl mx-auto text-zinc-400 text-lg leading-8">
