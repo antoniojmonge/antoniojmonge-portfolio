@@ -458,7 +458,7 @@ export default function HorrorWriterLanding() {
           </span>
 
           <h3 className="font-title text-6xl md:text-7xl mt-6 mb-8">
-            No Sense
+            Senseless
           </h3>
 
           <p className="max-w-3xl mx-auto text-zinc-400 text-lg leading-8">
