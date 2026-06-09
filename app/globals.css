@@ -1,26 +1,122 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #050505;
+  --foreground: #f5f5f5;
+
+  --card: rgba(255, 255, 255, 0.03);
+
+  --accent: #6d1111;
+  --accent-hover: #8c1a1a;
+
+  --border: rgba(255, 255, 255, 0.08);
+
+  --footer: #555;
+
+  --font-title: var(--font-playfair);
+  --font-nav: var(--font-courier);
+}
+
+.light-mode {
+  --background: #f4ecde;
   --foreground: #171717;
+
+  --card: rgba(0, 0, 0, 0.03);
+
+  --accent: #7c1d1d;
+  --accent-hover: #991b1b;
+
+  --border: rgba(0, 0, 0, 0.08);
+
+  --footer: #666;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  transition:
+    background-color .4s ease,
+    color .4s ease;
+}
+
+.font-title {
+  font-family: var(--font-title);
+}
+
+.font-nav {
+  font-family: var(--font-nav);
+}
+
+.book-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  transition: all .35s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent);
+  box-shadow: 0 20px 40px rgba(0,0,0,.15);
+}
+
+.book-cover {
+  width: 70px;
+  height: 100px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(120,0,0,.8),
+      rgba(30,0,0,.9)
+    );
+}
+
+.author-photo {
+  width: 280px;
+  height: 360px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(120,0,0,.2),
+      rgba(0,0,0,.4)
+    );
+}
+
+.theme-button {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 999px;
+
+  border: 1px solid var(--border);
+
+  cursor: pointer;
+
+  transition: all .3s ease;
+}
+
+.theme-button:hover {
+  transform: rotate(15deg);
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  font-size: .8rem;
+  color: var(--footer);
+  border-top: 1px solid var(--border);
 }
